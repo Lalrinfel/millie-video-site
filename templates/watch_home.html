@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Watch Videos</title>
+    <style>
+      body {
+          background-color: #dfffd8;
+          font-family: 'Comic Sans MS', cursive, sans-serif;
+          text-align: center;
+      }
+      .container {
+          background-color: #e6ffcc;
+          width: 400px;
+          margin: 100px auto;
+          padding: 30px;
+          border-radius: 20px;
+          box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      }
+      h2 {
+          color: green;
+          margin-bottom: 20px;
+      }
+      select {
+          background-color: #d0f0b6; /* light green */
+          color: #003300;
+          border: 1px solid #66bb6a;
+          border-radius: 8px;
+          padding: 10px;
+          font-size: 16px;
+      }
+      button {
+          background-color: #66bb6a;
+          color: white;
+          border: none;
+          cursor: pointer;
+          padding: 10px;
+          border-radius: 8px;
+          font-size: 16px;
+      }
+      button:hover {
+          background-color: #57a05a;
+      }
+  </style>
+  
+</head>
+<body>
+    <div class="container">
+        <h2>🌿 Watch Videos 🌿</h2>
+        <form action="/watch-videos" method="GET">
+            <label>Select Subject:</label><br>
+            <select name="subject" required>
+                <option value="">--Choose a subject--</option>
+                <option value="economics">Economics</option>
+                <option value="english">English</option>
+                <option value="geography">Geography</option>
+                <option value="history">History</option>
+                <option value="mathematics">Mathematics</option>
+                <option value="mizo">Mizo</option>
+                <option value="polity">Polity</option>
+                <option value="reasoning">Reasoning</option>
+                <option value="general_science">General Science</option>
+                <option value="others">Others</option>
+            </select><br><br>
+            <button type="submit">View Videos</button>
+        </form>
+        <br>
+        <a href="/upload-page">
+            <button style="background-color: #66bb6a; color: white; padding: 10px 20px; border: none; border-radius: 8px; font-size: 16px; cursor: pointer;">
+                Upload Video
+            </button>
+        </a>
+    </div>
+</body>
+</html>

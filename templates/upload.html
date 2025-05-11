@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Upload a Video</title>
+    <style>
+        body {
+            background-color: #e0f7d5;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .upload-container {
+            background-color: #f0fce8;
+            padding: 30px 40px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            text-align: center;
+        }
+
+        h2 {
+            color: #2d5f34;
+            font-size: 28px;
+            margin-bottom: 25px;
+        }
+
+        select, input[type="file"] {
+            margin: 15px 0;
+            padding: 10px;
+            width: 100%;
+            border-radius: 8px;
+            border: 1px solid #b2d8b2;
+            background-color: #d6f5d6;
+        }
+
+        button {
+            background-color: #75d175;
+            border: none;
+            padding: 12px 20px;
+            font-size: 16px;
+            border-radius: 8px;
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            margin-top: 10px;
+        }
+
+        button:hover {
+            background-color: #5bb25b;
+        }
+
+        a {
+            display: inline-block;
+            margin-top: 20px;
+            color: #2d5f34;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="upload-container">
+        <h2>🌿 Upload Video 🌿</h2>
+        <form action="/upload" method="POST" enctype="multipart/form-data">
+            <label for="subject">Select Subject:</label><br>
+            <select name="subject" required>
+                <option value="">--Choose a subject--</option>
+                <option value="economics">Economics</option>
+                <option value="english">English</option>
+                <option value="geography">Geography</option>
+                <option value="history">History</option>
+                <option value="mathematics">Mathematics</option>
+                <option value="mizo">Mizo</option>
+                <option value="polity">Polity</option>
+                <option value="reasoning">Reasoning</option>
+                <option value="general science">General Science</option>
+                <option value="others">Others</option>
+            </select><br>
+
+            <label for="video">Choose a video file:</label><br>
+            <input type="file" name="video" accept="video/*" required><br>
+
+            <button type="submit">Upload Video</button>
+        </form>
+        <a href="/watch-home">&larr; Back to Watch Videos</a>
+    </div>
+</body>
+</html>

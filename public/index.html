@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login - Millie Magical Forest</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500&display=swap">
+    <style>
+        body {
+            background-color: #DFFFD6;
+            font-family: 'Fredoka', sans-serif;
+            text-align: center;
+            padding-top: 100px;
+        }
+        .title {
+            font-size: 32px;
+            margin-top: 20px;
+            color: #3B7A57;
+        }
+        .leaf-icon {
+            height: 60px;
+            vertical-align: middle;
+        }
+        .login-btn {
+            background-color: #A8E6A3;
+            border: none;
+            border-radius: 10px;
+            padding: 15px 25px;
+            margin: 10px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .login-btn:hover {
+            background-color: #9ddc94;
+        }
+    </style>
+</head>
+<body>
+    <img src="{{ url_for('static', filename='leaf.png') }}" alt="Leaf" class="leaf-icon">
+    <div class="title">Millie Magical Forest</div>
+
+    <p>Welcome! Please log in to enter 🌟</p>
+
+    <button class="login-btn" onclick="location.href='/login/google'">Login with Google</button>
+    <button class="login-btn" onclick="location.href='/login/email'">Login with Email</button>
+</body>
+</html>
